@@ -1,0 +1,1 @@
+PIXEL.HUD.ServerName = "PIXEL DarkRP"
