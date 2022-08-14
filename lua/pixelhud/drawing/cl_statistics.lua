@@ -33,10 +33,13 @@ local function enableStatsDrawing()
         ["Player Count"] = function(localPly)
             return player.GetCount() .. "/" .. game.MaxPlayers()
         end,
-        ["Session Time"] = function(localPly)
+    }
+
+    if Utime then
+        stats["Session Time"] = function(localPly)
             return PIXEL.FormatTime(localPly.GetUTimeSessionTime and localPly:GetUTimeSessionTime() or 0)
         end
-    }
+    end
 
     PIXEL.RegisterFont("HUD.Statistics", "Open Sans SemiBold", 21)
 

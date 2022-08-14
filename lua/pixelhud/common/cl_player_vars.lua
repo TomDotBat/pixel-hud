@@ -91,8 +91,10 @@ hook.Add("PIXEL.HUD.FinishedBuilding", "PIXEL.WaitToCheckStats", function()
         checkChanges("health", localPly.Health)
         checkChanges("armor", localPly.Armor)
 
-        checkChanges("time", localPly.GetUTimeTotalTime)
-
+        if Utime then
+            checkChanges("time", localPly.GetUTimeTotalTime)
+        end
+        
         checkWeaponStats()
     end)
 end)
