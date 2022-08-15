@@ -60,8 +60,6 @@ function PANEL:Init()
     moneyElem.CurValue = 0
     moneyElem.TargetValue = self.Player:getDarkRPVar("money")
 
-    PIXEL.FormatTime(time)
-
     local timeElem = self:AddElement("fyibNtJ", "time", nil, PIXEL.FormatTime)
     timeElem:SetText("0m 0s")
 end
