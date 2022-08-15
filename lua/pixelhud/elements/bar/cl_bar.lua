@@ -62,7 +62,7 @@ function PANEL:Init()
 
     PIXEL.FormatTime(time)
 
-    if localPly.GetUTimeTotalTime then
+    if self.Player.GetUTimeTotalTime then
         local timeElem = self:AddElement("fyibNtJ", "time", nil, PIXEL.FormatTime)
         timeElem:SetText("0m 0s")
     end
