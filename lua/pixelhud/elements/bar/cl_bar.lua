@@ -62,8 +62,10 @@ function PANEL:Init()
 
     PIXEL.FormatTime(time)
 
-    local timeElem = self:AddElement("fyibNtJ", "time", nil, PIXEL.FormatTime)
-    timeElem:SetText("0m 0s")
+    if UTime then
+        local timeElem = self:AddElement("fyibNtJ", "time", nil, PIXEL.FormatTime)
+        timeElem:SetText("0m 0s")
+    end
 end
 
 function PANEL:AddElement(imgurID, var, dock, formatter, lerp)
