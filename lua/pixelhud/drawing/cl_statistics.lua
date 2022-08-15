@@ -35,7 +35,7 @@ local function enableStatsDrawing()
         end,
     }
 
-    if localPly.GetUTimeTotalTime then
+    if LocalPlayer().GetUTimeTotalTime then
         stats["Session Time"] = function(localPly)
             return PIXEL.FormatTime(localPly.GetUTimeSessionTime and localPly:GetUTimeSessionTime())
         end
